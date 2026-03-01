@@ -19,10 +19,17 @@
 
 <header>
     <h1 id="logo">Octavio Beledo 💻</h1>
-    <nav>
-        <a class="link" href="#experiencia">Experiencia</a>
-        <a class="link" href="#proyectos">Proyectos</a>
-        <a class="link" href="https://www.linkedin.com/in/octaviobeledo/" target="_blank">LinkedIn</a>
+
+    <button class="hamburger" id="hamburger">
+        ☰
+    </button>
+
+    <nav id="nav">
+        <div class="nav-links">
+            <a class="link" href="#experiencia">Experiencia</a>
+            <a class="link" href="#proyectos">Proyectos</a>
+            <a class="link" href="https://www.linkedin.com/in/octaviobeledo/" target="_blank">LinkedIn</a>
+        </div>
     </nav>    
 </header>
 
@@ -53,9 +60,7 @@
 
     <section id="tech-fav">
         <aside>
-            <header>
                 <h2 style="font-size: 30px; margin-bottom: 20px;">Tecnologías favoritas</h2>
-            </header>
             <ol class="tech-grid">
                 <li><img src="https://skillicons.dev/icons?i=html" alt="HTML"><span>HTML</span></li>
                 <li><img src="https://skillicons.dev/icons?i=css" alt="CSS"><span>CSS</span></li>
@@ -161,6 +166,14 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>
